@@ -11,8 +11,6 @@ install_java()
 {
   if [ command java &> /dev/null ]; then
     export JAVA_HOME="`/usr/libexec/java_home -v 10`"
-  else
-    echo 'Java is not installed'
   fi
 }
 
@@ -32,8 +30,6 @@ rbenv()
     eval "$(rbenv init -)"
     export PATH="$HOME/.rbenv/bin:$PATH"
     export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-  else
-    echo 'rbenv is not installed'
   fi
 }
 
