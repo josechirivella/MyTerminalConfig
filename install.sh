@@ -2,11 +2,29 @@
 
 config="MyTerminalConfig"
 
-echo "Creating system link for vim"
-ln -sf $config/.vim ~/.vim
-ln -sf $config/.vimrc ~/.vimrc
+vim_install()
+{
+  if [ ! -f $HOME/.vimrc ]; then
+    echo 'Vim not found. Proceeding with installation'
+    ln -sf $config/.vim $HOME/.vim
+    ln -sf $config/.vimrc $HOME/.vimrc
+    echo 'Success installing Vim'
+  else
+    echo 'Vim files exist. Skipping'
+  fi
+}
 
-echo "Creating system link for tmux"
-ln -sf $config/.tmux.conf ~/.tmux.conf
+tmux_install()
+{
+  if [ ! -f $HOME/.tmux.conf ]; then
+    echo 'Tmux config file not found. Proceeding with installation'
+    ln -sf $config/.tmux.conf $HOME/.tmux.conf
+    echo 'Success installing Tmux'
+  else
+    echo 'Tmux file exist. Skipping'
+  fi
+}
 
-echo "Success!"
+
+vim_install
+tmux_install
