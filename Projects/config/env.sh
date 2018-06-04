@@ -9,7 +9,7 @@ export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PR
 # Java
 install_java()
 {
-  if ! type java > /dev/null do
+  if [ command java &> /dev/null ]; then
     export JAVA_HOME="`/usr/libexec/java_home -v 10`"
   else
     echo 'Java is not installed'
@@ -28,7 +28,7 @@ export USER_NAME=$USER
 # Ruby
 rbenv()
 {
-  if ! type rbenv > /dev/null do
+  if [ command rbenv &> /dev/null ]; then
     eval "$(rbenv init -)"
     export PATH="$HOME/.rbenv/bin:$PATH"
     export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
