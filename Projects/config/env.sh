@@ -24,17 +24,23 @@ export EDITOR='vim'
 export USER_NAME=$USER
 
 # Ruby
-rbenv()
-{
-  if [ command rbenv &> /dev/null ]; then
+#rbenv()
+#{
+#  if [ command rbenv &> /dev/null ]; then
     eval "$(rbenv init -)"
     export PATH="$HOME/.rbenv/bin:$PATH"
+    export PATH="$HOME/.rbenv/shims:$PATH"
     export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-  fi
-}
+  #fi
+#}
 
 #mkdir and cd
 function mkcd() { mkdir -p "$@" && cd "$_"; }
+
+# Google Cloud SDK
+if [ -f '/Users/jchirivella/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/jchirivella/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/jchirivella/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/jchirivella/google-cloud-sdk/completion.zsh.inc'; fi
+alias changegcloud="gcloud config configurations activate"
 
 # Aliases
 alias gpsu='git push --set-upstream origin'
@@ -48,5 +54,5 @@ alias copypublicssh="pbcopy < ~/.ssh/id_rsa.pub"
 # Cisco
 source $HOME/MyTerminalConfig/Projects/config/cisco.sh
 
-rbenv
+#rbenv
 install_java
