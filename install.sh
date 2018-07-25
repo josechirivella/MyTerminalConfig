@@ -29,12 +29,14 @@ zsh_install()
 {
   if [ ! -f $HOME/.zshrc ]; then
     echo '.zshrc file not found'
+    ln -sf $config/.zshrc $HOME/.zshrc
   else
     echo '.zshrc file detected. Proceeding...'
-    mv .zshrc .zshrc.original.backup
+    mv $HOME/.zshrc $HOME/.zshrc.original.backup
     ln -sf $config/.zshrc $HOME/.zshrc
   fi
 }
 
 vim_install
 tmux_install
+zsh_install

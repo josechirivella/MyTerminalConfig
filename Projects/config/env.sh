@@ -24,15 +24,15 @@ export EDITOR='vim'
 export USER_NAME=$USER
 
 # Ruby
-#rbenv()
-#{
-#  if [ command rbenv &> /dev/null ]; then
+rbenv()
+{
+  if [ command rbenv &> /dev/null ]; then
     eval "$(rbenv init -)"
     export PATH="$HOME/.rbenv/bin:$PATH"
     export PATH="$HOME/.rbenv/shims:$PATH"
     export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-  #fi
-#}
+  fi
+}
 
 #mkdir and cd
 function mkcd() { mkdir -p "$@" && cd "$_"; }
@@ -49,10 +49,12 @@ alias zshconfig="vim ~/.zshrc"
 alias reloadzsh="source ~/.zshrc"
 alias envconfig="vim ~/MyTerminalConfig/Projects/config/env.sh"
 alias dm="docker-machine"
+alias dc="docker-compose"
+alias d="docker"
 alias copypublicssh="pbcopy < ~/.ssh/id_rsa.pub"
 
 # Cisco
 source $HOME/MyTerminalConfig/Projects/config/cisco.sh
 
-#rbenv
+rbenv
 install_java
