@@ -53,8 +53,5 @@ alias dc="docker-compose"
 alias d="docker"
 alias copypublicssh="pbcopy < ~/.ssh/id_rsa.pub"
 
-# Cisco
-source $HOME/MyTerminalConfig/Projects/config/cisco.sh
-
 rbenv
 install_java

@@ -1,0 +1,22 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true,
+        "**/.idea": true
+    },
+    "files.autoSave": "onWindowChange",
+    "editor.fontSize": 14,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "javascript.format.enable": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.detectIndentation": true,
+    "editor.quickSuggestionsDelay": 0
+}
