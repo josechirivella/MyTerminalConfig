@@ -1,6 +1,25 @@
 #! /bin/sh
 
 config="MyTerminalConfig"
+unameOut="$(uname -a)"
+
+case "${os}" in
+	Linux*)  os=Linux;;
+	fedora*) os=Fedora;;
+	Darwin*) os=Mac;;
+esac
+echo ${os}
+fedora()
+{
+	if [os | grep 'fedora']; then
+		echo 'Fedora detected. Proceeding'
+		./fedora.sh
+	fi
+}
+
+macOS()
+{
+
 
 vim_install()
 {
