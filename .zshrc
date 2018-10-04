@@ -12,4 +12,3 @@ plugins=(git git-completion colored-man colorize github brew osx zsh-syntax-high
 . ~/MyTerminalConfig/Projects/config/env.sh
 . ~/MyTerminalConfig/Projects/config/foodlogiq.sh
 DEFAULT_USER=$USER
-

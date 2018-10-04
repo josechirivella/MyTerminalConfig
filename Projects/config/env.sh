@@ -24,13 +24,15 @@ export EDITOR='vim'
 export USER_NAME=$USER
 
 # Ruby
-rbenv()
+rbenv_install()
 {
-  if [ command rbenv &> /dev/null ]; then
-    eval "$(rbenv init -)"
+  if [ -d "$HOME/.rbenv" ]; then
     export PATH="$HOME/.rbenv/bin:$PATH"
     export PATH="$HOME/.rbenv/shims:$PATH"
     export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+    eval "$(rbenv init -)"
+  else
+    echo 'rbenv not detected'
   fi
 }
 
@@ -53,5 +55,5 @@ alias dc="docker-compose"
 alias d="docker"
 alias copypublicssh="pbcopy < ~/.ssh/id_rsa.pub"
 
-rbenv
+rbenv_install
 install_java
