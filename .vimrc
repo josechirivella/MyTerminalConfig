@@ -10,7 +10,7 @@ set clipboard=unnamed
 " }}}
 " Spaces & Tabs {{{
 set tabstop=2           " 2 space tab
-set expandtab           " use spaces for tabs
+set noexpandtab           " use tabs
 set softtabstop=2       " 2 space tab
 set shiftwidth=2
 set modelines=1
