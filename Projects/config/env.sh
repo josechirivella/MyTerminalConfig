@@ -3,9 +3,12 @@
 # PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-# Node
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
-
+# Node (N ->  Node version manager)
+if [ -d "$HOME/n" ]; then
+  export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+else
+  echo 'N not installed'
+fi
 # Java
 install_java()
 {
@@ -40,8 +43,8 @@ rbenv_install()
 function mkcd() { mkdir -p "$@" && cd "$_"; }
 
 # Google Cloud SDK
-if [ -f '/Users/jchirivella/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/jchirivella/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/Users/jchirivella/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/jchirivella/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f $HOME'/google-cloud-sdk/path.zsh.inc' ]; then source $HOME'/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f $HOME'/google-cloud-sdk/completion.zsh.inc' ]; then source $HOME'/google-cloud-sdk/completion.zsh.inc'; fi
 alias changegcloud="gcloud config configurations activate"
 
 # Aliases
