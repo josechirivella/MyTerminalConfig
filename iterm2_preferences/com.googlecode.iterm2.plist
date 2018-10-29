@@ -17,7 +17,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents</string>
+	<string>~/MyTerminalConfig/iterm2_preferences</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -54,11 +54,11 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>-982 759 445 103 -1440 -525 1440 2538 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>-1030 1101 620 392 -1440 -525 1440 2560 </string>
+	<string>530 493 620 392 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-1166 803 796 486 -1440 -525 1440 2560 </string>
+	<string>376 363 796 486 0 0 1680 1050 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
-	<string>-1341 1428 592 584 -1440 -525 1440 2537 </string>
+	<string>1910 1021 592 584 1680 188 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>-1440 -525 825 502 -1440 -525 1440 2560 </string>
 	<key>New Bookmarks</key>
@@ -666,6 +666,8 @@
 			<string></string>
 			<key>Silence Bell</key>
 			<false/>
+			<key>Space</key>
+			<integer>0</integer>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tags</key>
@@ -694,6 +696,8 @@
 			<string>/Users/josechirivella</string>
 		</dict>
 	</array>
+	<key>NoSyncHaveRequestedFullDiskAccess</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
 	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
@@ -704,6 +708,10 @@
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>560096575.45963204</real>
+	<key>OpenBookmark</key>
+	<false/>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -738,7 +746,9 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/josechirivella/Documents</string>
+	<string>/Users/josechirivella/MyTerminalConfig/iterm2_preferences</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -748,18 +758,18 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-10-15T17:11:02Z</date>
+	<date>2018-10-26T15:03:55Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>1</integer>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1539358592</real>
+	<real>1540493056</real>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.2.3</string>
+	<string>3.2.5beta1</string>
 </dict>
 </plist>
