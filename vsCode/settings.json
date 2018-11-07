@@ -8,8 +8,8 @@
         "**/node_modules": true,
         "**/.idea": true
     },
-    "files.autoSave": "onWindowChange",
-    "editor.fontSize": 14,
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 16,
     "workbench.colorTheme": "Visual Studio Dark",
     "editor.minimap.enabled": false,
     "explorer.confirmDelete": false,
@@ -18,5 +18,14 @@
     "javascript.format.enable": true,
     "files.trimTrailingWhitespace": true,
     "editor.detectIndentation": true,
-    "editor.quickSuggestionsDelay": 0
+    "editor.quickSuggestionsDelay": 0,
+    "editor.wordWrap": "on",
+    "editor.tabCompletion": "on",
+    "editor.find.autoFindInSelection": true,
+    "editor.find.globalFindClipboard": true,
+    "auto-close-tag.SublimeText3Mode": true,
+    "html.format.indentInnerHtml": true,
+    "html.suggest.angular1": true,
+    "html.suggest.ionic": true
 }
+
