@@ -13,7 +13,7 @@
     "workbench.colorTheme": "Visual Studio Dark",
     "editor.minimap.enabled": false,
     "explorer.confirmDelete": false,
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "editor.formatOnPaste": true,
     "javascript.format.enable": true,
     "files.trimTrailingWhitespace": true,
@@ -26,6 +26,9 @@
     "auto-close-tag.SublimeText3Mode": true,
     "html.format.indentInnerHtml": true,
     "html.suggest.angular1": true,
-    "html.suggest.ionic": true
+    "html.suggest.ionic": true,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "Droid Sans Mono for Powerline",
+    "terminal.integrated.fontSize": 16,
+    "workbench.startupEditor": "welcomePage"
 }
-
