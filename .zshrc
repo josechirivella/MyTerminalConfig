@@ -11,5 +11,6 @@ fi
 plugins=(git git-completion colored-man colorize github brew osx zsh-syntax-highlighting ruby rbenv rails git-flow git-flow-completion tmux docker docker-compose go golang iterm2 ssh-agent zsh_reload)
 . ~/MyTerminalConfig/env/env.sh
 . ~/MyTerminalConfig/env/foodlogiq.sh
+. ~/MyTerminalConfig/env/alias.sh
 DEFAULT_USER=$USER
 neofetch
