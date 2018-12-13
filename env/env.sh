@@ -7,7 +7,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 if [ -d "$HOME/n" ]; then
   export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 else
-  echo 'N not installed'
+	echo 'n (node version manager) not installed'
 fi
 # Java
 install_java()
@@ -18,7 +18,7 @@ install_java()
 }
 
 # Virtual Environment
-export PROJECT_HOME=$HOME/MyTerminalConfig/Projects
+export PROJECT_HOME=$HOME/MyTerminalConfig/
 
 # Editor
 export EDITOR='vim'

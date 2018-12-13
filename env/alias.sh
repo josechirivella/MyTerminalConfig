@@ -1,0 +1,1 @@
+alias reloadShell="exec $SHELL"

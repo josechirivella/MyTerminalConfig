@@ -1,6 +1,6 @@
 #! /bin/sh
 
-config="MyTerminalConfig"
+config="$HOME/MyTerminalConfig"
 
 vim_install()
 {
