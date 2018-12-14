@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # PATH
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.local/bin:$HOME/MyTerminalConfig/bin"
 
 # Node (N ->  Node version manager)
 if [ -d "$HOME/n" ]; then
@@ -57,6 +57,7 @@ alias dm="docker-machine"
 alias dc="docker-compose"
 alias d="docker"
 alias copypublicssh="pbcopy < ~/.ssh/id_rsa.pub"
+alias moveFiles='rsync -avhW --no-compress --progress --remove-source-files'
 
 rbenv_install
 install_java
