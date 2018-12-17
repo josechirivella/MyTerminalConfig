@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # PATH
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/MyTerminalConfig/bin"
 
 # Node (N ->  Node version manager)
 if [ -d "$HOME/n" ]; then
