@@ -66,4 +66,4 @@ fi
 vim_install
 tmux_install
 zsh_install
-vscode_install
+# vscode_install
