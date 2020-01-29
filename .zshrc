@@ -14,3 +14,5 @@ plugins=(git colorize github brew osx ruby rbenv rails git-flow tmux docker dock
 . ~/MyTerminalConfig/env/alias.sh
 DEFAULT_USER=$USER
 neofetch
+# Alfred / Todoist Workflow
+export NODE_OPTIONS=--experimental-worker
