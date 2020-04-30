@@ -12,10 +12,8 @@ plugins=(git colorize github brew osx ruby rbenv rails git-flow tmux docker dock
 . ~/MyTerminalConfig/env/env.sh
 . ~/MyTerminalConfig/env/foodlogiq.sh
 . ~/MyTerminalConfig/env/alias.sh
-
-if [[ "$DESKTOP_SESSION" == "xfce" ]]; then
-  . ~/MyTerminalConfig/env/manjaro.sh
+if [[ `uname` == "Darwin" ]]; then
+  . ~/MyTerminalConfig/env/osx.sh
 fi
-
 DEFAULT_USER=$USER
 neofetch
