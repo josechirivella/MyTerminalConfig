@@ -15,6 +15,8 @@ if [[ `$DESKTOP_SESSION` == "ubuntu" ]]; then
 	. ~/MyTerminalConfig/env/ubuntu.sh
 fi
 . ~/MyTerminalConfig/env/alias.sh
+if [[ `uname` == "Darwin" ]]; then
+  . ~/MyTerminalConfig/env/osx.sh
+fi
 DEFAULT_USER=$USER
 neofetch
-# Alfred / Todoist Workflow
