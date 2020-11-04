@@ -17,9 +17,19 @@ fi
 if [[ $DESKTOP_SESSION == "ubuntu" ]]; then
 	. ~/MyTerminalConfig/env/ubuntu.sh
 fi
+
 . ~/MyTerminalConfig/env/alias.sh
+
 if [[ `uname` == "Darwin" ]]; then
   . ~/MyTerminalConfig/env/osx.sh
 fi
+
+if [[ "$DESKTOP_SESSION" == "xfce" ]]; then
+  . ~/MyTerminalConfig/env/manjaro.sh
+fi
 DEFAULT_USER=$USER
 neofetch
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
