@@ -4,6 +4,7 @@ git_install()
 	echo 'Setting git global values'
 	git config --global user.name "Jose Chirivella"
 	git config --global user.email "$email" 
+	git config --global init.defaultBranch main
 }
 
 git_install

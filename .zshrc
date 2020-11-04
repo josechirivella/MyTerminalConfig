@@ -11,6 +11,9 @@ fi
 plugins=(git colorize github brew osx ruby rbenv rails git-flow tmux docker docker-compose go golang iterm2 ssh-agent zsh_reload encode64 git npm rsync systemd ufw)
 . ~/MyTerminalConfig/env/env.sh
 . ~/MyTerminalConfig/env/foodlogiq.sh
+if [[ $DESKTOP_SESSION == "xfce" ]]; then
+	. ~/MyTerminalConfig/env/manjaro.sh
+fi
 if [[ $DESKTOP_SESSION == "ubuntu" ]]; then
 	. ~/MyTerminalConfig/env/ubuntu.sh
 fi
