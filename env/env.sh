@@ -9,6 +9,14 @@ if [ -d "$HOME/n" ]; then
 else
 	echo 'n (node version manager) not installed'
 fi
+
+# NVM (Node Version Manager)
+if [ -d "$HOME/.nvm" ]; then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
+
 # Java
 install_java()
 {
@@ -46,18 +54,6 @@ function mkcd() { mkdir -p "$@" && cd "$_"; }
 if [ -f $HOME'/google-cloud-sdk/path.zsh.inc' ]; then source $HOME'/google-cloud-sdk/path.zsh.inc'; fi
 if [ -f $HOME'/google-cloud-sdk/completion.zsh.inc' ]; then source $HOME'/google-cloud-sdk/completion.zsh.inc'; fi
 alias changegcloud="gcloud config configurations activate"
-
-# Aliases
-alias gpsu='git push --set-upstream origin'
-alias gc='git checkout'
-alias zshconfig="vim ~/.zshrc"
-alias reloadzsh="exec $SHELL"
-alias envconfig="vim ~/MyTerminalConfig/Projects/config/env.sh"
-alias dm="docker-machine"
-alias dc="docker-compose"
-alias d="docker"
-alias copypublicssh="pbcopy < ~/.ssh/id_rsa.pub"
-alias moveFiles='rsync -avhW --no-compress --progress --remove-source-files'
 
 rbenv_install
 install_java
