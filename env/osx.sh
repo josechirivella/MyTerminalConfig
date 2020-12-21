@@ -8,3 +8,4 @@ export GPG_TTY
 # export CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL="https://services.gradle.org/distributions/gradle-6.6.1-all.zip"
 # export ANDROID_HOME="$USER/Library/Android/sdk"
 # export ANDROID_SDK_ROOT="$USER/Library/Android/sdk"
+alias fixappstore="rm -r '$TMPDIR/../C/com.apple.appstore/'* && killall -9 appstoreagent"
