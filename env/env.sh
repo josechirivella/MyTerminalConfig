@@ -51,8 +51,10 @@ rbenv_install()
 function mkcd() { mkdir -p "$@" && cd "$_"; }
 
 # Google Cloud SDK
-if [ -f $HOME'/google-cloud-sdk/path.zsh.inc' ]; then source $HOME'/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f $HOME'/google-cloud-sdk/completion.zsh.inc' ]; then source $HOME'/google-cloud-sdk/completion.zsh.inc'; fi
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/jchirivella/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jchirivella/google-cloud-sdk/path.zsh.inc'; fi
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/jchirivella/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jchirivella/google-cloud-sdk/completion.zsh.inc'; fi
 alias changegcloud="gcloud config configurations activate"
 
 rbenv_install
