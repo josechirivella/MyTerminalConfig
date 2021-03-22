@@ -8,8 +8,7 @@ if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 fi
 
-plugins=(git colorize github brew osx ruby rbenv rails git-flow tmux docker docker-compose go golang iterm2 ssh-agent zsh_reload encode64 git npm rsync systemd ufw)
-
+plugins=(git colorize github brew osx ruby rbenv rails git-flow tmux docker docker-compose golang iterm2 ssh-agent zsh_reload encode64 git npm rsync systemd ufw)
 . ~/MyTerminalConfig/env/env.sh
 . ~/MyTerminalConfig/env/foodlogiq.sh
 . ~/MyTerminalConfig/env/alias.sh
@@ -31,7 +30,7 @@ if [[ "$DESKTOP_SESSION" == "Linux" ]]; then
 fi
 
 DEFAULT_USER=$USER
-neofetch
+# neofetch
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
