@@ -25,7 +25,7 @@ if [[ `uname` == "Darwin" ]]; then
   . ~/MyTerminalConfig/env/osx.sh
 fi
 
-if [[ "$DESKTOP_SESSION" == "Linux" ]]; then
+if [[ `uname` == "Linux" ]]; then
   . ~/MyTerminalConfig/env/wsl.sh
 fi
 
