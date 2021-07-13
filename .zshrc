@@ -14,18 +14,18 @@ plugins=(git colorize github brew osx ruby rbenv rails git-flow tmux docker dock
 . ~/MyTerminalConfig/env/alias.sh
 
 if [[ $DESKTOP_SESSION == "xfce" ]]; then
-	. ~/MyTerminalConfig/env/manjaro.sh
+  . ~/MyTerminalConfig/env/manjaro.sh
 fi
 
 if [[ $DESKTOP_SESSION == "ubuntu" ]]; then
-	. ~/MyTerminalConfig/env/ubuntu.sh
+  . ~/MyTerminalConfig/env/ubuntu.sh
 fi
 
-if [[ `uname` == "Darwin" ]]; then
+if [[ $(uname) == "Darwin" ]]; then
   . ~/MyTerminalConfig/env/osx.sh
 fi
 
-if [[ `uname` == "Linux" ]]; then
+if [[ $(uname) == "Linux" ]]; then
   . ~/MyTerminalConfig/env/wsl.sh
 fi
 
@@ -37,5 +37,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"                                       # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
