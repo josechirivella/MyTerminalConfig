@@ -22,6 +22,7 @@ fi
 
 if [[ $(uname) == "Darwin" ]]; then
   . ~/MyTerminalConfig/env/osx.sh
+  . ~/MyTerminalConfig/env/processMaker.sh
 fi
 
 if [[ $(uname) == "Linux" ]]; then
