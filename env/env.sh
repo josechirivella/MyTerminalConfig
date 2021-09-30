@@ -11,6 +11,12 @@ else
   echo 'n (node version manager) not installed'
 fi
 
+# SDK Man
+if [ -d "$HOME/.sdkman" ]; then
+  export SDKMAN_DIR="$HOME/.sdkman"
+  [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+fi
+
 # NVM (Node Version Manager)
 if [ -d "$HOME/.nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
