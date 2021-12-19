@@ -711,7 +711,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>1</integer>
+			<integer>15</integer>
 			<key>Working Directory</key>
 			<string>/Users/josechirivella</string>
 		</dict>
