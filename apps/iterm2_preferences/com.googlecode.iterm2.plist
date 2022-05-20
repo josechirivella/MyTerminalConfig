@@ -692,6 +692,11 @@
 	<true/>
 	<key>SoundForEsc</key>
 	<false/>
+	<key>ToolbeltTools</key>
+	<array>
+		<string>Profiles</string>
+		<string>Paste History</string>
+	</array>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 </dict>
