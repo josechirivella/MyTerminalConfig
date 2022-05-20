@@ -11,6 +11,12 @@ elif [ -d "$HOME/.nvm" ]; then
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"                   # This loads nvm
   [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion" #bash_completion
+elif [ -d "$HOME/.asdf" ]; then
+	. $HOME/.asdf/asdf.sh
+	# append completions to fpath
+	fpath=(${ASDF_DIR}/completions $fpath)
+	# initialise completions with ZSH's compinit
+	autoload -Uz compinit && compinit
 else
   echo 'No Node Version Manager has been installed'
 fi
