@@ -49,6 +49,14 @@ rbenv_install() {
   fi
 }
 
+function clonepersonal() {
+	git clone git@github.com:josechirivella/$1
+}
+
+function clonefrustrated() {
+	git clone git@github.com:frustrateddeveloper/$1
+}
+
 #mkdir and cd
 function mkcd() { mkdir -p "$@" && cd "$_"; }
 
