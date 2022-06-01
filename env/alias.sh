@@ -10,3 +10,4 @@ alias copypublicssh="pbcopy < ~/.ssh/id_rsa.pub"
 alias moveFiles='rsync -avhW --no-compress --progress --remove-source-files'
 alias reloadshell="exec $SHELL"
 alias myconfig="cd ~/MyTerminalConfig/"
+alias mux="tmuxinator"
