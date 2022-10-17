@@ -30,6 +30,6 @@ restartBrewServices() {
   done
 }
 
-clone() {
+function cloneProcess() {
   git clone git@github.com:processmaker/$1
 }
