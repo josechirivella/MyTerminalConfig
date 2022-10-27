@@ -6,4 +6,6 @@ function startServices() {
   for service in "${services[@]}"; do
     sudo service $service start
   done
+  # Added php-fpm since for reason, it doens't start on boot
+  php-fpm
 }
