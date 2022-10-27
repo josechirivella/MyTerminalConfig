@@ -1,11 +1,10 @@
 # MySQL
 export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 
-# PHP
-export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
-export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
-
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
+
+# Composer
+export PATH="$PATH:$(which composer)/vendor/bin"
 
 # PM
 export PATH="$HOME/.composer/vendor/bin:$PATH"
