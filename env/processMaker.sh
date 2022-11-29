@@ -3,6 +3,9 @@ export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 
+# Composer
+export PATH="$PATH:$(which composer)/vendor/bin"
+
 # PM
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
@@ -31,6 +34,6 @@ restartBrewServices() {
   done
 }
 
-clone() {
+function cloneProcess() {
   git clone git@github.com:processmaker/$1
 }
