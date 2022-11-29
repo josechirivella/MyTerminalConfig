@@ -1,10 +1,6 @@
 # MySQL
 export PATH="/opt/homebrew/opt/mysql@5.7/bin:$PATH"
 
-# PHP
-export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
-export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
-
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 
 # PM
@@ -23,8 +19,13 @@ export OPENSSL_DIR="/opt/homebrew/opt/openssl"
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 export PUPPETEER_EXECUTABLE_PATH=$CHROME_BIN
 
+export PNPM_HOME="/Users/jchirivella/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+
+alias wipedb="php artisan db:wipe --force && php artisan migrate:fresh --seed --force"
+
 restartBrewServices() {
-  services=("mysql@5.7" "php@7.4" "nginx" "redis")
+  services=("mysql@5.7" "php" "nginx" "redis")
   for service in "${services[@]}"; do
     brew services restart $service
   done
