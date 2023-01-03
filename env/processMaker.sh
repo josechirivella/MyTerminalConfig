@@ -28,7 +28,7 @@ export PATH="$PNPM_HOME:$PATH"
 alias wipedb="php artisan db:wipe --force && php artisan migrate:fresh --seed --force"
 
 restartBrewServices() {
-  services=("mysql@5.7" "php" "nginx" "redis")
+  services=("mysql@5.7" "php" "nginx" "redis" "supervisor")
   for service in "${services[@]}"; do
     brew services restart $service
   done
