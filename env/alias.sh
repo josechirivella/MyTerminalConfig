@@ -11,3 +11,4 @@ alias moveFiles='rsync -avhW --no-compress --progress --remove-source-files'
 alias reloadshell="exec $SHELL"
 alias myconfig="cd ~/MyTerminalConfig/"
 alias mux="tmuxinator"
+alias pm="pnpm"
