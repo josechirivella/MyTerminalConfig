@@ -27,8 +27,12 @@ export PATH="$PNPM_HOME:$PATH"
 
 alias wipedb="php artisan db:wipe --force && php artisan migrate:fresh --seed --force"
 
+function composer-require() {
+  composer require processmaker/$1 && php artisan $1:install
+}
+
 restartBrewServices() {
-  services=("mysql" "php" "php@8.1" "nginx" "redis" "supervisor")
+  services=("mysql" "php" "nginx" "redis" "supervisor")
   for service in "${services[@]}"; do
     brew services restart $service
   done
