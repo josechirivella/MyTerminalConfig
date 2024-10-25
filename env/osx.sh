@@ -1,10 +1,17 @@
-export FIREFOX_BIN="/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox-bin"
-export CHROME_BIN="/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
-export PATH="$PATH:/usr/local/sbin:/opt/homebrew/bin"
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-export optflags="-Wno-error=implicit-function-declaration"
-export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
-export GPG_TTY=$(tty)
+export PATH="$PATH:/opt/homebrew/sbin:/opt/homebrew/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/opt/postgresql@17/bin:/opt/homebrew/opt/openjdk/bin"
 alias fixappstore="rm -r '$TMPDIR/../C/com.apple.appstore/'* && killall -9 appstoreagent"
+
+restartBrewServices() {
+  services=("php" "postgresql@17")
+  for service in "${services[@]}"; do
+    brew services restart $service
+  done
+}
+
+# pnpm
+export PNPM_HOME="/Users/$USER/Library/pnpm"
+case ":$PATH:" in
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
