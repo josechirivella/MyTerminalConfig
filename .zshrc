@@ -10,7 +10,7 @@ if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 fi
 
-plugins=(git colorize github brew osx ruby rbenv rails git-flow tmux docker docker-compose ssh-agent zsh_reload encode64 git npm rsync systemd ufw)
+plugins=(git colorize github brew osx ruby rbenv rails git-flow tmux docker docker-compose ssh-agent zsh_reload encode64 git npm rsync systemd ufw asdf)
 . ~/MyTerminalConfig/env/env.sh
 . ~/MyTerminalConfig/env/alias.sh
 
@@ -33,9 +33,7 @@ fi
 DEFAULT_USER=$USER
 # neofetch
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)

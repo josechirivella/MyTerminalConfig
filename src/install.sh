@@ -2,8 +2,7 @@
 
 config="$HOME/MyTerminalConfig"
 
-vim_install()
-{
+vim_install() {
   if [ ! -f $HOME/.vimrc ]; then
     echo 'Vim not found. Proceeding with installation'
     ln -sf $config/.vim $HOME/.vim
@@ -14,8 +13,7 @@ vim_install()
   fi
 }
 
-tmux_install()
-{
+tmux_install() {
   if [ ! -f $HOME/.tmux.conf ]; then
     echo 'Tmux config file not found. Proceeding with installation'
     ln -sf $config/.tmux.conf $HOME/.tmux.conf
@@ -25,8 +23,7 @@ tmux_install()
   fi
 }
 
-zsh_install()
-{
+zsh_install() {
   if [ ! -f $HOME/.zshrc ]; then
     echo '.zshrc file not found'
     ln -sf $config/.zshrc $HOME/.zshrc
@@ -37,8 +34,18 @@ zsh_install()
   fi
 }
 
+asdf_install() {
+  if [ ! -f $HOME/.asdfrc ]; then
+    echo '.asdfrc file not found'
+    ln -sf $config/.asdfrc $HOME/.zshrc
+  else
+    echo '.asdfrc file detected. Proceeding...'
+    mv $HOME/.asdfrc $HOME/.asdfrc.original.backup
+    ln -sf $config/.asdfrc $HOME/.asdfrc
+  fi
+}
 
 vim_install
 tmux_install
 zsh_install
-
+asdf_install
