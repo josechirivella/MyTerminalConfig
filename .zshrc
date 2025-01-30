@@ -10,7 +10,7 @@ if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 fi
 
-plugins=(git colorize github brew osx ruby rbenv rails git-flow tmux docker docker-compose iterm2 ssh-agent zsh_reload encode64 git npm yarn rsync systemd ufw)
+plugins=(git colorize github brew osx ruby rbenv rails git-flow tmux docker docker-compose ssh-agent zsh_reload encode64 git npm rsync systemd ufw asdf)
 . ~/MyTerminalConfig/env/env.sh
 . ~/MyTerminalConfig/env/alias.sh
 
@@ -24,7 +24,6 @@ fi
 
 if [[ $(uname) == "Darwin" ]]; then
   . ~/MyTerminalConfig/env/osx.sh
-  . ~/MyTerminalConfig/env/processMaker.sh
 fi
 
 if [[ $(uname) == "Linux" ]]; then
@@ -33,3 +32,16 @@ fi
 
 DEFAULT_USER=$USER
 # neofetch
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+eval "$(direnv hook zsh)"
+
+# bun completions
+[ -s "/Users/jchirivella/.bun/_bun" ] && source "/Users/jchirivella/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
