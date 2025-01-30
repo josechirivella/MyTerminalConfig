@@ -37,7 +37,6 @@ DEFAULT_USER=$USER
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
-eval "$(direnv hook zsh)"
 
 # bun completions
 [ -s "/Users/jchirivella/.bun/_bun" ] && source "/Users/jchirivella/.bun/_bun"

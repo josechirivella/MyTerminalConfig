@@ -1,6 +1,8 @@
 export PATH="$PATH:/opt/homebrew/sbin:/opt/homebrew/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/opt/postgresql@17/bin:/opt/homebrew/opt/openjdk/bin"
 alias fixappstore="rm -r '$TMPDIR/../C/com.apple.appstore/'* && killall -9 appstoreagent"
 
+eval "$(direnv hook zsh)"
+
 restartBrewServices() {
   services=("php" "postgresql@17")
   for service in "${services[@]}"; do
