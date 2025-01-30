@@ -33,8 +33,6 @@ fi
 DEFAULT_USER=$USER
 # neofetch
 
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 

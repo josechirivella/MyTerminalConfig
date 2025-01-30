@@ -3,6 +3,8 @@ alias fixappstore="rm -r '$TMPDIR/../C/com.apple.appstore/'* && killall -9 appst
 
 eval "$(direnv hook zsh)"
 
+[ -s "/opt/homebrew/opt/asdf/libexec/asdf.sh" ] && . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
 restartBrewServices() {
   services=("php" "postgresql@17")
   for service in "${services[@]}"; do
