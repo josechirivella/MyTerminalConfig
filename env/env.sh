@@ -12,9 +12,8 @@ elif [ -d "$HOME/.nvm" ]; then
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"                   # This loads nvm
   [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion" #bash_completion
 elif [ -d "$HOME/.asdf" ]; then
-  . $HOME/.asdf/asdf.sh
   # append completions to fpath
-  fpath=(${ASDF_DIR}/completions $fpath)
+  fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
   # initialise completions with ZSH's compinit
   autoload -Uz compinit && compinit
 else
@@ -70,7 +69,6 @@ function convertImagesToWebp() {
 function mkcd() { mkdir -p "$@" && cd "$_"; }
 
 # Google Cloud SDK
-# The next line updates PATH for the Google Cloud SDK.
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f $HOME'/google-cloud-sdk/path.zsh.inc' ]; then . $HOME'/google-cloud-sdk/path.zsh.inc'; fi
 

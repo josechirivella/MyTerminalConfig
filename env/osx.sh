@@ -1,4 +1,5 @@
-export PATH="$PATH:/opt/homebrew/sbin:/opt/homebrew/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/opt/postgresql@17/bin:/opt/homebrew/opt/openjdk/bin"
+export PATH="$PATH:/opt/homebrew/sbin:/opt/homebrew/bin:/usr/local/sbin:/opt/homebrew/bin:/opt/homebrew/opt/postgresql@17/bin:/opt/homebrew/opt/openjdk/bin:${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+export GOPATH="$HOME/repos/go"
 alias fixappstore="rm -r '$TMPDIR/../C/com.apple.appstore/'* && killall -9 appstoreagent"
 
 restartBrewServices() {
