@@ -2,6 +2,10 @@ export PATH="$PATH:/opt/homebrew/sbin:/opt/homebrew/bin:/usr/local/sbin:/opt/hom
 export GOPATH="$HOME/repos/go"
 alias fixappstore="rm -r '$TMPDIR/../C/com.apple.appstore/'* && killall -9 appstoreagent"
 
+eval "$(direnv hook zsh)"
+
+[ -s "/opt/homebrew/opt/asdf/libexec/asdf.sh" ] && . /opt/homebrew/opt/asdf/libexec/asdf.sh
+
 restartBrewServices() {
   services=("php" "postgresql@17")
   for service in "${services[@]}"; do
