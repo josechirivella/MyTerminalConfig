@@ -42,3 +42,4 @@ source <(ng completion script)
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export COREPACK_ENABLE_AUTO_PIN=0
