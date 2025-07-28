@@ -36,13 +36,11 @@ export EDITOR='vim'
 # Owner
 export USER_NAME=$USER
 
-# Ruby
+# Ruby - Lazy loading for faster startup
 rbenv_install() {
   if [ -d "$HOME/.rbenv" ]; then
-    export PATH="$HOME/.rbenv/bin:$PATH"
-    export PATH="$HOME/.rbenv/shims:$PATH"
-    export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-    eval "$(rbenv init -)"
+    export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+    # Skip slow eval for faster startup - rbenv will work via shims in PATH
   else
     echo 'rbenv not detected'
   fi
