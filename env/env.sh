@@ -1,6 +1,39 @@
 #!/bin/zsh
 
-# PATH
+# PATH Management Utilities
+dedupe_path() {
+  local path_var="${1:-PATH}"
+  local current_path
+  eval "current_path=\$$path_var"
+  local new_path=""
+  local IFS=':'
+
+  for dir in $current_path; do
+    if [[ ":$new_path:" != *":$dir:"* ]] && [[ -n "$dir" ]]; then
+      if [[ -z "$new_path" ]]; then
+        new_path="$dir"
+      else
+        new_path="$new_path:$dir"
+      fi
+    fi
+  done
+
+  eval "export $path_var=\"$new_path\""
+}
+
+add_to_path() {
+  local new_dir="$1"
+  local path_var="${2:-PATH}"
+
+  local current_path
+  eval "current_path=\$$path_var"
+  
+  if [[ -d "$new_dir" ]] && [[ ":$current_path:" != *":$new_dir:"* ]]; then
+    eval "export $path_var=\"$new_dir:$current_path\""
+  fi
+}
+
+# Initial PATH setup
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.local/bin:$HOME/MyTerminalConfig/bin:/usr/local/opt:$PATH"
 
 # Node Version Manager
@@ -39,8 +72,9 @@ export USER_NAME=$USER
 # Ruby - Lazy loading for faster startup
 rbenv_install() {
   if [ -d "$HOME/.rbenv" ]; then
-    export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-    # Skip slow eval for faster startup - rbenv will work via shims in PATH
+  add_to_path "$HOME/.rbenv/bin"
+  add_to_path "$HOME/.rbenv/shims"
+  add_to_path "$HOME/.rbenv/plugins/ruby-build/bin"
   else
     echo 'rbenv not detected'
   fi
