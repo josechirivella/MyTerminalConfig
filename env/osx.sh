@@ -7,10 +7,9 @@ eval "$(direnv hook zsh)"
 [ -s "/opt/homebrew/opt/asdf/libexec/asdf.sh" ] && . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 restartBrewServices() {
-  services=("php" "postgresql@17")
-  for service in "${services[@]}"; do
-    brew services restart $service
-  done
+    for service in $(brew services list --json | jq '.[].name' | tr -d '"'); do
+        brew services restart $service
+    done
 }
 
 # pnpm
