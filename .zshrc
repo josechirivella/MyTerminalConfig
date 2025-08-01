@@ -39,13 +39,13 @@ ng() {
     echo "Angular CLI not found"
     return 1
   fi
-  
+
   # Load completions on first use
   if [[ -z "$_NG_COMPLETION_LOADED" ]]; then
     source <(command ng completion script)
     export _NG_COMPLETION_LOADED=1
   fi
-  
+
   command ng "$@"
 }
 
@@ -53,7 +53,7 @@ ng() {
 if [[ -d "$HOME/.bun" ]] || command -v bun &> /dev/null; then
   # bun completions
   [ -s "/Users/jchirivella/.bun/_bun" ] && source "/Users/jchirivella/.bun/_bun"
-  
+
   # bun
   export BUN_INSTALL="$HOME/.bun"
   add_to_path "$BUN_INSTALL/bin"
