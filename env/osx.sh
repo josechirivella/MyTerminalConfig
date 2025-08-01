@@ -21,6 +21,7 @@ restartBrewServices() {
     done
 }
 
+PNPM_HOME="/Users/$USER/Library/pnpm"
 add_to_path "$PNPM_HOME"
 
 # LM Studio
