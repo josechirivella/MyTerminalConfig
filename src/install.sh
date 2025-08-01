@@ -37,7 +37,7 @@ zsh_install() {
 asdf_install() {
   if [ ! -f $HOME/.asdfrc ]; then
     echo '.asdfrc file not found'
-    ln -sf $config/.asdfrc $HOME/.zshrc
+    ln -sf $config/.asdfrc $HOME/.asdfrc
   else
     echo '.asdfrc file detected. Proceeding...'
     mv $HOME/.asdfrc $HOME/.asdfrc.original.backup

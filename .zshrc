@@ -33,13 +33,32 @@ fi
 DEFAULT_USER=$USER
 # neofetch
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
+# Lazy load Angular CLI autocompletion for faster startup
+ng() {
+  if ! command -v ng &> /dev/null; then
+    echo "Angular CLI not found"
+    return 1
+  fi
+  
+  # Load completions on first use
+  if [[ -z "$_NG_COMPLETION_LOADED" ]]; then
+    source <(command ng completion script)
+    export _NG_COMPLETION_LOADED=1
+  fi
+  
+  command ng "$@"
+}
 
-# bun completions
-[ -s "/Users/jchirivella/.bun/_bun" ] && source "/Users/jchirivella/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# bun - only configure if installed
+if [[ -d "$HOME/.bun" ]] || command -v bun &> /dev/null; then
+  # bun completions
+  [ -s "/Users/jchirivella/.bun/_bun" ] && source "/Users/jchirivella/.bun/_bun"
+  
+  # bun
+  export BUN_INSTALL="$HOME/.bun"
+  add_to_path "$BUN_INSTALL/bin"
+fi
 export COREPACK_ENABLE_AUTO_PIN=0
+
+# Deduplicate PATH at the end of configuration loading
+dedupe_path
