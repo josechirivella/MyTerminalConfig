@@ -23,7 +23,7 @@ restartBrewServices() {
 
 
 # pnpm
-export PNPM_HOME="/Users/jchirivella/Library/pnpm"
+export PNPM_HOME="/Users/$USER/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -31,4 +31,4 @@ esac
 # pnpm end
 
 # LM Studio
-add_to_path "/Users/jchirivella/.lmstudio/bin"
+add_to_path "/Users/$USER/.lmstudio/bin"
