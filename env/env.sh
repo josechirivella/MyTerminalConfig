@@ -27,7 +27,7 @@ add_to_path() {
 
   local current_path
   eval "current_path=\$$path_var"
-  
+
   if [[ -d "$new_dir" ]] && [[ ":$current_path:" != *":$new_dir:"* ]]; then
     eval "export $path_var=\"$new_dir:$current_path\""
   fi
@@ -75,6 +75,7 @@ rbenv_install() {
   add_to_path "$HOME/.rbenv/bin"
   add_to_path "$HOME/.rbenv/shims"
   add_to_path "$HOME/.rbenv/plugins/ruby-build/bin"
+  eval "$(rbenv init - --no-rehash zsh)"
   else
     echo 'rbenv not detected'
   fi

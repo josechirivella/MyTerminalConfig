@@ -31,4 +31,4 @@ esac
 # pnpm end
 
 # LM Studio
-add_to_path "/Users/$USER/.lmstudio/bin"
+add_to_path "$HOME/.lmstudio/bin"
