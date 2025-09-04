@@ -32,3 +32,5 @@ esac
 
 # LM Studio
 add_to_path "$HOME/.lmstudio/bin"
+
+eval "$(mise activate zsh)"
