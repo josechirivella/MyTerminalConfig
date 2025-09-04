@@ -35,7 +35,7 @@ DEFAULT_USER=$USER
 
 # Lazy load Angular CLI autocompletion for faster startup
 ng() {
-  if ! command -v ng &> /dev/null; then
+  if ! command -v ng &>/dev/null; then
     echo "Angular CLI not found"
     return 1
   fi
@@ -50,9 +50,9 @@ ng() {
 }
 
 # bun - only configure if installed
-if [[ -d "$HOME/.bun" ]] || command -v bun &> /dev/null; then
+if [[ -d "$HOME/.bun" ]] || command -v bun &>/dev/null; then
   # bun completions
-  [ -s "/Users/jchirivella/.bun/_bun" ] && source "/Users/jchirivella/.bun/_bun"
+  [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
   # bun
   export BUN_INSTALL="$HOME/.bun"
