@@ -69,18 +69,6 @@ export EDITOR='vim'
 # Owner
 export USER_NAME=$USER
 
-# Ruby - Lazy loading for faster startup
-rbenv_install() {
-  if [ -d "$HOME/.rbenv" ]; then
-  add_to_path "$HOME/.rbenv/bin"
-  add_to_path "$HOME/.rbenv/shims"
-  add_to_path "$HOME/.rbenv/plugins/ruby-build/bin"
-  eval "$(rbenv init - --no-rehash zsh)"
-  else
-    echo 'rbenv not detected'
-  fi
-}
-
 function clonepersonal() {
   git clone git@github.com:josechirivella/$1
 }
@@ -109,5 +97,4 @@ if [ -f $HOME'/google-cloud-sdk/path.zsh.inc' ]; then . $HOME'/google-cloud-sdk/
 if [ -f $HOME'/google-cloud-sdk/completion.zsh.inc' ]; then . $HOME'/google-cloud-sdk/completion.zsh.inc'; fi
 alias changegcloud="gcloud config configurations activate"
 
-rbenv_install
 install_java
